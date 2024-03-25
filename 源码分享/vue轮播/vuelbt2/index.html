@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <h3 style="color: aliceblue;text-align: center;padding-top: 50px">vue 轮播图</h3>
+    <!--轮播结构-->
+    <div class="carousel" @mouseenter="enter" @mouseleave="leave">
+        <transition-group tag="ul" name="image" enter-active-class="animated lightSpeedIn" leave-active-class="animated lightSpeedOut">
+            <li v-for='(image,index) in img' :key='index' v-show="index === mark">
+                <a href="javascript:;">
+                    <img :src="image">
+                </a>
+            </li>
+        </transition-group>
+        <div class="bullet">
+            <span v-for="(item,index) in img.length" :class="{'active':index === mark}" @click="change(index)" :key="index"></span>
+        </div>
+        <div class="switch">
+            <span class="prev" @click="prev">&lt;</span>
+            <span class="next" @click="next">&gt;</span>
+        </div>
+    </div>
+    <script src="js/jquery1.10.2.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script>
+        //初始化一个vue实例然后挂载到父元素上，并设定数据为图片的数组，以及后面计数用的mark，mark初始值为0
+        var vm = new Vue({
+            el: '.carousel',
+            data: {
+                mark: 0,
+                img: [
+                    'img/a1.jpg',
+                    'img/a2.jpg',
+                    'img/a3.jpg',
+                    'img/a4.jpg'
+                ],
+                time: null
+            },
+            methods: {
+                change(i) {
+                    this.mark = i;
+                },
+                prev() {
+                    this.mark--;
+                    if (this.mark === -1) {
+                        this.mark = 3;
+                        return
+                    }
+                },
+                next() {
+                    this.mark++;
+                    if (this.mark === 4) {
+                        this.mark = 0;
+                        return
+                    }
+                },
+                autoPlay() {
+                    this.mark++;
+                    if (this.mark === 4) {
+                        this.mark = 0;
+                        return
+                    }
+                },
+                play() {
+                    this.time = setInterval(this.autoPlay, 3000);
+                },
+                enter() {
+                    console.log('enter')
+                    clearInterval(this.time);
+                },
+                leave() {
+                    console.log('leave')
+                    this.play();
+                }
+            },
+            created() {
+                this.play()
+            }
+        })
+    </script>
+</body>
+
+</html>

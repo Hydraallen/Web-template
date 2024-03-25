@@ -1,0 +1,2750 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+/*
+! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
+*/
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+::before,
+::after {
+  --tw-content: '';
+}
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: "Inter", sans-serif; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+/*
+Remove the default font size and weight for headings.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+/*
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+/*
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+:-moz-focusring {
+  outline: auto;
+}
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+legend {
+  padding: 0;
+}
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+  padding: 0;
+}
+/*
+Prevent resizing textareas horizontally by default.
+*/
+textarea {
+  resize: vertical;
+}
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+/*
+Set the default cursor for buttons.
+*/
+button,
+[role="button"] {
+  cursor: pointer;
+}
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+*, ::before, ::after{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+::backdrop{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+.container{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+}
+.collapse{
+  visibility: collapse !important;
+}
+.static{
+  position: static !important;
+}
+.fixed{
+  position: fixed !important;
+}
+.absolute{
+  position: absolute !important;
+}
+.relative{
+  position: relative !important;
+}
+.sticky{
+  position: sticky !important;
+}
+.inset-0{
+  inset: 0px !important;
+}
+.bottom-full{
+  bottom: 100% !important;
+}
+.top-0{
+  top: 0px !important;
+}
+.top-full{
+  top: 100% !important;
+}
+.z-\[1\]{
+  z-index: 1 !important;
+}
+.mx-2{
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+}
+.mx-4{
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+.my-2{
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+.mb-10{
+  margin-bottom: 2.5rem !important;
+}
+.mt-2{
+  margin-top: 0.5rem !important;
+}
+.block{
+  display: block !important;
+}
+.inline-block{
+  display: inline-block !important;
+}
+.flex{
+  display: flex !important;
+}
+.table{
+  display: table !important;
+}
+.grid{
+  display: grid !important;
+}
+.hidden{
+  display: none !important;
+}
+.h-24{
+  height: 6rem !important;
+}
+.h-32{
+  height: 8rem !important;
+}
+.w-\[calc\(100\%-2rem\)\]{
+  width: calc(100% - 2rem) !important;
+}
+.w-full{
+  width: 100% !important;
+}
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+.cursor-pointer{
+  cursor: pointer !important;
+}
+.resize{
+  resize: both !important;
+}
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+.flex-wrap{
+  flex-wrap: wrap !important;
+}
+.items-center{
+  align-items: center !important;
+}
+.justify-center{
+  justify-content: center !important;
+}
+.gap-12{
+  gap: 3rem !important;
+}
+.divide-y > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-y-reverse: 0 !important;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse))) !important;
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse)) !important;
+}
+.divide-gray-200 > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 1 !important;
+  border-color: rgb(229 231 235 / var(--tw-divide-opacity)) !important;
+}
+.truncate{
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+.rounded-lg{
+  border-radius: 0.5rem !important;
+}
+.rounded-md{
+  border-radius: 0.375rem !important;
+}
+.border{
+  border-width: 1px !important;
+}
+.border-gray-200{
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity)) !important;
+}
+.bg-gray-900{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity)) !important;
+}
+.bg-green-200{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity)) !important;
+}
+.bg-slate-900{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity)) !important;
+}
+.bg-white{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+.bg-opacity-50{
+  --tw-bg-opacity: 0.5 !important;
+}
+.bg-gradient-to-l{
+  background-image: linear-gradient(to left, var(--tw-gradient-stops)) !important;
+}
+.from-pink-400{
+  --tw-gradient-from: #f472b6 var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(244 114 182 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+.to-blue-600{
+  --tw-gradient-to: #2563eb var(--tw-gradient-to-position) !important;
+}
+.bg-clip-text{
+  -webkit-background-clip: text !important;
+          background-clip: text !important;
+}
+.p-2{
+  padding: 0.5rem !important;
+}
+.px-3{
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+.px-4{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+.py-14{
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem !important;
+}
+.py-2{
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+.py-20{
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+.text-center{
+  text-align: center !important;
+}
+.text-2xl{
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+.text-4xl{
+  font-size: 2.25rem !important;
+  line-height: 2.5rem !important;
+}
+.text-sm{
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+.font-semibold{
+  font-weight: 600 !important;
+}
+.uppercase{
+  text-transform: uppercase !important;
+}
+.lowercase{
+  text-transform: lowercase !important;
+}
+.leading-\[50px\]{
+  line-height: 50px !important;
+}
+.tracking-wide{
+  letter-spacing: 0.025em !important;
+}
+.text-transparent{
+  color: transparent !important;
+}
+.opacity-0{
+  opacity: 0 !important;
+}
+.blur{
+  --tw-blur: blur(8px) !important;
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+}
+/* CSS */
+.button-1 {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsla(0, 0%, 0%, 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.button-1-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to left, hsl(340, 100%, 16%) 0%, hsl(340, 100%, 32%) 8%, hsl(340, 100%, 32%) 92%, hsl(340, 100%, 16%) 100%);
+}
+
+.button-1-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345, 100%, 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-1-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+.button-1:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-1:hover .button-1-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button-1:active .button-1-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-1:hover .button-1-shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button-1:active .button-1-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-1:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* CSS */
+button.button-2 {
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button.button-2:focus {
+  outline-style: solid;
+  outline-color: transparent;
+}
+
+button.button-2 {
+  margin: 3px;
+  cursor: pointer;
+  touch-action: manipulation;
+  border: 1px solid #0360df;
+  border-radius: 50px;
+  padding: 12px 16px;
+  background-color: #0360df;
+  background-image: radial-gradient(75% 50% at 50% 0%, #f4feff 12%, transparent), radial-gradient(75% 50% at 50% 85%, #8de3fc, transparent);
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-shadow: 0 1px 1px #116ee7;
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.2s;
+}
+
+button.button-2:hover {
+  transform: scale(1.04);
+}
+
+button.button-2:active {
+  border-color: #0048d5;
+  transform: scale(0.96);
+  background-color: #0048d5;
+}
+
+/* CSS */
+button.button-3 {
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button.button-3:focus {
+  outline-style: solid;
+  outline-color: transparent;
+}
+
+button.button-3 {
+  margin: 3px;
+  cursor: pointer;
+  touch-action: manipulation;
+  position: relative;
+  border: 1px solid #0360df;
+  border-radius: 50px;
+  padding: 12px 16px;
+  background-color: #0360df;
+  background-image: radial-gradient(75% 50% at 50% 0%, #f4feff, transparent), radial-gradient(75% 35% at 50% 80%, #8de3fc, transparent);
+  box-shadow: inset 0 -2px 4px 1px rgba(17, 110, 231, 0.6), inset 0 -4px 4px 1px #8de3fc, inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(17, 110, 231, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-shadow: 0 1px 1px #116ee7;
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.2s;
+}
+
+button.button-3::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  width: 80%;
+  height: 40%;
+  background-image: linear-gradient(to bottom, #f4feff, transparent);
+  opacity: 0.75;
+}
+
+button.button-3:hover {
+  transform: scale(1.04);
+}
+
+button.button-3:active {
+  border-color: #0048d5;
+  transform: scale(0.96);
+  background-color: #0048d5;
+}
+
+/* CSS */
+button.button-4,
+button.button-4:before,
+button.button-4:after {
+  box-sizing: border-box;
+}
+
+button.button-4 {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: block;
+  height: 60px;
+  width: 175px;
+  padding: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-radius: 10px;
+  top: 0;
+  transition: 0.15s ease-in-out;
+  touch-action: manipulation;
+  -webkit-transform: perspective(500px) rotateX(35deg);
+}
+
+button.button-4:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background: #f25d30;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f25d30 0%, #e03b00 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f25d30", endColorstr="#e03b00", GradientType=0);
+  /* IE6-9 */
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-shadow: inset 0 -2px 5px rgba(255, 255, 255, 0.3);
+}
+
+button.button-4:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 1px;
+  height: 15px;
+  width: 173px;
+  background: #ba2500;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ba2500 0%, #9b3100 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ba2500", endColorstr="#9b3100", GradientType=0);
+  /* IE6-9 */
+  border-radius: 0 0 5px 5px;
+  -webkit-transform: perspective(500px) rotateX(-40deg);
+  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.5), 0 3px 2px -1px black;
+  transition: 0.15s ease-in-out;
+}
+
+button.button-4:hover {
+  top: -3px;
+}
+
+button.button-4:hover:after {
+  height: 18.5px;
+  bottom: -13px;
+}
+
+button.button-4:active {
+  top: 0px;
+}
+
+button.button-4:active:after {
+  height: 15px;
+  bottom: -10px;
+}
+
+button.button-4 .text {
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* CSS */
+.button-5 {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-5:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-5:main,
+.button-5:focus {
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+          user-select: auto;
+}
+
+.button-5:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-5:disabled {
+  cursor: auto;
+}
+
+.button-5:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+/* CSS */
+.button-6 {
+  touch-action: manipulation;
+  background-image: linear-gradient(#4098ff, #4058ff 62%, #4075ff);
+  border: 0.5px solid #3247cf;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.14) 0 1px 0.5px, rgba(182, 229, 255, 0.4) 0 1px 0.5px inset, rgba(23, 45, 202, 0.46) 0 -1px 0.5px inset, #233ced 0 0 0 0.5px inset;
+  color: #fff;
+  font-weight: 600;
+  outline: 3px #fff;
+  outline-offset: 0;
+  position: relative;
+  text-shadow: #233ced 0 -1px 0.5px;
+  top: 0;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 100%;
+  padding: 12px 24px 14px;
+  /* optional */
+  transition-property: outline-offset, border-color, transform;
+  transition-duration: 0.2s;
+}
+
+.button-6:active,
+.button-6:hover {
+  outline: 0;
+}
+
+.button-6:hover {
+  background-image: linear-gradient(#40a6ff, #4058ff 62%, #4075ff);
+  box-shadow: rgba(0, 0, 0, 0.12) 0 2px 6px, rgba(0, 0, 0, 0.14) 0 1px 0.5px, rgba(182, 229, 255, 0.4) 0 1px 0.5px inset, rgba(23, 45, 202, 0.46) 0 -1px 0.5px inset, #233ced 0 0 0 0.5px inset;
+  opacity: 1;
+  /* optional */
+  transform: scale(1.04);
+}
+
+.button-6:active {
+  background-image: linear-gradient(#0a40ce, #4058ff 38%, #40a0ff);
+  border-color: #192ba1;
+  box-shadow: #0b1c95 0 1px inset, transparent 0 -1px 0.5px inset, rgba(13, 33, 176, 0.53) 0 2px 0.5px inset, rgba(35, 60, 237, 0.31) 0 0 0 0.5px inset;
+  text-shadow: #233ced 0 1px 0.5px;
+  /* optional */
+  transform: scale(0.98);
+}
+
+/* CSS */
+.button-7 {
+  touch-action: manipulation;
+  cursor: pointer;
+  position: relative;
+  padding: 1.25rem 3.75rem;
+  border-radius: 1.87rem;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 150ms ease-in-out;
+  border: 1px solid #012880;
+  background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+  box-shadow: 0 0.5rem 0.625rem 0 rgba(0, 0, 0, 0.2), 0 -0.125rem 0.75rem rgb(110, 15, 155) inset, 0 0.375rem 0.125rem rgba(255, 255, 255, 0.4) inset, 0 0.125rem 0.25rem 0 rgb(180, 70, 207) inset;
+}
+
+.button-7 span {
+  color: transparent;
+  background-image: linear-gradient(0deg, #EE82DA -10%, #FEFAFD 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 2px 2px hsl(290, 100%, 20%));
+}
+
+.button-7::before {
+  content: "";
+  display: block;
+  height: 0.125rem;
+  position: absolute;
+  top: 0.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 3.75rem);
+  background: #fff;
+  border-radius: 100%;
+  opacity: 0.7;
+  background-image: linear-gradient(-270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+}
+
+.button-7::after {
+  content: "";
+  display: block;
+  height: 0.125rem;
+  position: absolute;
+  bottom: 0.375rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 3.75rem);
+  background: #fff;
+  border-radius: 100%;
+  filter: blur(1px);
+  opacity: 0.05;
+  background-image: linear-gradient(-270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255, 255, 255, 0) 100%);
+}
+
+.button-7:hover {
+  filter: brightness(1.1);
+}
+
+.button-7:active {
+  transform: scale(0.96);
+}
+
+/* CSS */
+.button-8 {
+  touch-action: manipulation;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: transparent;
+  border-style: initial;
+  border-width: 0;
+  cursor: pointer;
+  margin: 0;
+  text-transform: none;
+  vertical-align: baseline;
+}
+
+.button-8:focus {
+  outline: 0;
+}
+
+.button-8 {
+  touch-action: manipulation;
+  background-image: linear-gradient(135deg, color(display-p3 0.572549 0.415686 1) 0%, color(display-p3 1 0.466667 0.690196) 50%, color(display-p3 1 0.701961 0.403922) 100%);
+  border-radius: 8px;
+  color: #fff;
+  font-feature-settings: "ss01", "cv10", "calt" 0, "liga" 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 10px 20px;
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.6, 0.6, 0, 1), margin-top 0.2s cubic-bezier(0.6, 0.6, 0, 1);
+  transition-behavior: normal, normal;
+}
+
+.button-8::before {
+  -webkit-mask-clip: content-box, initial;
+  -webkit-mask-composite: xor;
+  -webkit-mask-image: linear-gradient(#fff 0, #fff 0), linear-gradient(#fff 0, #fff 0);
+  -webkit-mask-origin: content-box, initial;
+  -webkit-mask-position-x: initial, initial;
+  -webkit-mask-position-y: initial, initial;
+  -webkit-mask-repeat-x: initial, initial;
+  -webkit-mask-repeat-y: initial, initial;
+  -webkit-mask-size: initial, initial;
+  padding: 1px;
+  background-color: initial;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.32), transparent);
+  bottom: 0;
+  pointer-events: none;
+  right: 0;
+}
+
+.button-8::after,
+.button-8::before {
+  border-radius: inherit;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.button-8::after {
+  box-shadow: #000019 0 0, rgba(0, 0, 25, 0.3) 0 9px 21px, rgba(73, 2, 57, 0.2) 0 -3px inset;
+  height: 100%;
+  transition: box-shadow 0.2s cubic-bezier(0.6, 0.6, 0, 1), background-color 0.2s cubic-bezier(0.6, 0.6, 0, 1);
+  transition-behavior: normal, normal;
+  width: 100%;
+  z-index: 1;
+}
+
+.button-8:active {
+  transform: translateY(1.5px);
+}
+
+.button-8:hover::after {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button-8:active::after {
+  box-shadow: #000019 0 0, rgba(0, 0, 25, 0.2) 0 9px 21px, rgba(73, 2, 57, 0.2) 0 0 inset;
+}
+
+/* CSS */
+.button-9 {
+  align-self: auto;
+  background-color: #bebdd4;
+  background-image: linear-gradient(#b169ff, #653dbb);
+  border-radius: 23px;
+  box-shadow: rgba(131, 50, 234, 0.01) 0 41px 17px, rgba(131, 50, 234, 0.05) 0 23px 14px, rgba(131, 50, 234, 0.09) 0 10px 10px, rgba(131, 50, 234, 0.1) 0 3px 6px;
+  color: #fff;
+  font-family: Greycliff, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 46px;
+  left: auto;
+  line-height: 1;
+  padding: 8px 24px 10px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
+  transition: all 0.3s ease-in-out;
+  transition-behavior: normal;
+  z-index: 2;
+  touch-action: manipulation;
+  border-style: initial;
+  border-width: 0;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button-9:active,
+.button-9:hover {
+  background-image: linear-gradient(#8456d8, #3e0e99);
+}
+
+.button-9:active {
+  box-shadow: rgba(131, 50, 234, 0.1) 0 3px 6px;
+}
+
+/* CSS */
+button.button-10 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  touch-action: manipulation;
+  font-weight: 600;
+  color: #382b22;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #fff0f0;
+  border: 2px solid #b18597;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.button-10::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9c4d2;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.button-10:hover {
+  background: #ffe9e9;
+  transform: translate(0, 0.25em);
+}
+
+button.button-10:hover::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0.5em 0 0 #ffe3e2;
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.button-10:active {
+  background: #ffe9e9;
+  transform: translate(0em, 0.75em);
+}
+
+button.button-10:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}
+
+/* CSS */
+.button-11 {
+  touch-action: manipulation;
+  position: relative;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #888888;
+  outline: none;
+  background-color: #f4f5f6;
+  border-radius: 20px;
+  box-shadow: -3px -10px 17.5px #ffffff, -3px -5px 7.5px #ffffff, -10px 0px 15px #ffffff, 3px 10px 12.5px rgba(0, 0, 0, 0.2);
+  transition: 0.13s ease-in-out;
+  cursor: pointer;
+}
+
+.button-11:active {
+  box-shadow: none;
+}
+
+.button-11:active .button-11__content {
+  box-shadow: none;
+}
+
+.button-11:active .button-11__content .button-11__text,
+.button-11:active .button-11__content .button-11__icon {
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.button-11__content {
+  position: relative;
+  display: grid;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  box-shadow: inset 0px -4px 0px #dddddd, 0px -4px 0px #f4f5f6;
+  border-radius: 20px;
+  transition: 0.13s ease-in-out;
+  z-index: 1;
+}
+
+.button-11__icon {
+  position: relative;
+  display: flex;
+  transform: translate3d(0px, -2px, 0px);
+  grid-column: 4;
+  align-self: start;
+  justify-self: end;
+  width: 16px;
+  height: 16px;
+  transition: 0.13s ease-in-out;
+}
+
+.button-11__icon svg {
+  width: 16px;
+  height: 16px;
+  fill: #aaaaaa;
+}
+
+.button-11__text {
+  position: relative;
+  transform: translate3d(0px, -2px, 0px);
+  margin: 0;
+  align-self: end;
+  grid-column: 1/5;
+  grid-row: 2;
+  text-align: center;
+  font-size: 16px;
+  background-color: #888888;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  transition: 0.13s ease-in-out;
+}
+
+/* CSS */
+.button-12 {
+  touch-action: manipulation;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  font-size: 13px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 8px;
+  height: 65px;
+  padding: 12px;
+  border-radius: 15px 15px 12px 12px;
+  cursor: pointer;
+  margin: auto;
+  position: relative;
+  will-change: transform;
+  transition: all 0.1s ease-in-out 0s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  /* Add gradient shading to each side */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-position: bottom right, bottom right;
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: inset -4px -10px 0px rgba(255, 255, 255, 0.4), inset -4px -8px 0px rgba(0, 0, 0, 0.3), 0px 2px 1px rgba(0, 0, 0, 0.3), 0px 2px 1px rgba(255, 255, 255, 0.1);
+  transform: perspective(70px) rotateX(5deg) rotateY(0deg);
+}
+
+.button-12::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+  z-index: -1;
+  border-radius: 15px;
+  box-shadow: inset 4px 0px 0px rgba(255, 255, 255, 0.1), inset 4px -8px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.button-12::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-position: bottom right, bottom right;
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  border-radius: 15px;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.button-12:active {
+  will-change: transform;
+  transform: perspective(80px) rotateX(5deg) rotateY(1deg) translateY(3px) scale(0.96);
+  height: 64px;
+  border: 0.25px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset -4px -8px 0px rgba(255, 255, 255, 0.2), inset -4px -6px 0px rgba(0, 0, 0, 0.8), 0px 1px 0px rgba(0, 0, 0, 0.9), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.button-12::after:active {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.2));
+}
+
+.button-12:active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  width: 50%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: overlay-12 0.1s ease-in-out 0s;
+  pointer-events: none;
+}
+
+.button-12 svg {
+  width: 15px;
+  height: 15px;
+}
+
+@keyframes overlay-12 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.button-12:focus {
+  outline: none;
+}
+
+/* CSS */
+.button-13 {
+  touch-action: manipulation;
+  background: none;
+  position: relative;
+  border-width: 4px 12px;
+  border-style: solid;
+  border-color: transparent;
+  padding: 8px 24px;
+  text-align: center;
+  color: #fff;
+  transition-property: transform;
+  transition-duration: 0.4s;
+}
+
+.button-13:active {
+  transform: scale(0.92);
+}
+
+.button-13-background {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  -webkit-clip-path: polygon(12px 0, calc(100% - 12px) 0%, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0% calc(100% - 12px), 0% 12px);
+          clip-path: polygon(12px 0, calc(100% - 12px) 0%, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0% calc(100% - 12px), 0% 12px);
+  background-color: saddlebrown;
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)), linear-gradient(to bottom, #af6a65, calc(12.5% - 1px), #cfa381, #88312b calc(12.5% + 1px) 50%, #601d2c 50% calc(87.5% - 1px), #994021, #341227 calc(87.5% + 1px));
+  transition-property: filter;
+  transition-duration: 0.2s;
+  will-change: filter;
+}
+
+.button-13 .text {
+  background: linear-gradient(180deg, #FFE5C2 1%, #CDAF87 100%), #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  z-index: 3;
+  position: relative;
+}
+
+@media (hover: hover) {
+  .button-13:hover .button-13-background {
+    filter: brightness(0.8);
+  }
+}
+.button-13:active .button-13-background {
+  filter: brightness(0.6);
+}
+
+.button-13-border {
+  position: absolute;
+  z-index: 1;
+  inset: -4px -12px;
+}
+
+@supports ((-webkit-mask-box-image: inherit) or (mask-border: inherit)) {
+  .button-13-border {
+    background-image: linear-gradient(to bottom, #bb9d7a 50%, #806d56 50%);
+    -webkit-mask-box-image-source: url("https://csspro.com/css-3d-buttons/buttons-img/baldurs-gate-3-border.svg");
+    -webkit-mask-box-image-slice: 15 23;
+    -webkit-mask-box-image-width: 15px 23px;
+    -webkit-mask-box-image-repeat: repeat;
+    mask-border-source: url("https://csspro.com/css-3d-buttons/buttons-img/baldurs-gate-3-border.svg");
+    mask-border-slice: 15 23;
+    mask-border-width: 15px 23px;
+    mask-border-repeat: repeat;
+  }
+}
+@supports not ((-webkit-mask-box-image: inherit) or (mask-border: inherit)) {
+  .button-13-border {
+    border-width: 15px 23px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url("https://csspro.com/css-3d-buttons/buttons-img/baldurs-gate-3-border-inverted.svg");
+    border-image-slice: 15 23;
+    border-image-width: 15px 23px;
+    border-image-repeat: repeat;
+    background-image: linear-gradient(#000, #000), linear-gradient(to bottom, #bb9d7a 50%, #806d56 50%);
+    background-origin: content-box, border-box;
+    background-repeat: no-repeat;
+    filter: url("#remove-black-button-13");
+  }
+}
+/* CSS */
+.button-14 {
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  position: relative;
+  border-width: 0;
+  padding: 0 8px 12px;
+  min-width: 10em;
+  box-sizing: border-box;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.button-14-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  padding: 8px 16px;
+  transform: translateY(0);
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
+  transition-property: transform;
+  transition-duration: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+
+.button-14:active .button-14-top {
+  transform: translateY(6px);
+}
+
+.button-14-top::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  background-image: radial-gradient(#cd3f64, #9d3656);
+  text-align: center;
+  color: #fff;
+  box-shadow: inset 0 0 0px 1px rgba(255, 255, 255, 0.2), 0 1px 2px 1px rgba(255, 255, 255, 0.2);
+  transition-property: border-radius, padding, width, transform;
+  transition-duration: 0.2s;
+}
+
+.button-14:active .button-14-top::after {
+  border-radius: 6px;
+  padding: 0 2px;
+}
+
+.button-14-bottom {
+  position: absolute;
+  z-index: -1;
+  bottom: 4px;
+  left: 4px;
+  border-radius: 8px/16px 16px 8px 8px;
+  padding-top: 6px;
+  width: calc(100% - 8px);
+  height: calc(100% - 10px);
+  box-sizing: content-box;
+  background-color: #803;
+  background-image: radial-gradient(4px 8px at 4px calc(100% - 8px), rgba(255, 255, 255, 0.25), transparent), radial-gradient(4px 8px at calc(100% - 4px) calc(100% - 8px), rgba(255, 255, 255, 0.25), transparent), radial-gradient(16px at -4px 0, white, transparent), radial-gradient(16px at calc(100% + 4px) 0, white, transparent);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5), inset 0 -1px 3px 3px rgba(0, 0, 0, 0.4);
+  transition-property: border-radius, padding-top;
+  transition-duration: 0.2s;
+}
+
+.button-14:active .button-14-bottom {
+  border-radius: 10px 10px 8px 8px/8px;
+  padding-top: 0;
+}
+
+.button-14-base {
+  position: absolute;
+  z-index: -2;
+  top: 4px;
+  left: 0;
+  border-radius: 12px;
+  width: 100%;
+  height: calc(100% - 4px);
+  background-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.75), inset 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* CSS */
+.button-15 {
+  touch-action: manipulation;
+  border-radius: 8px;
+  border: 0;
+  padding: 10px 16px;
+  background-image: linear-gradient(to bottom, #84b709, #46a100);
+  box-shadow: inset 0 -2px Rgb(0 0 0/0.2), 0 2px 4px Rgb(0 0 0/0.2);
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  transition-property: transform, opacity;
+  transition-duration: 0.4s, 0.2s;
+  transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1), ease-in-out;
+}
+
+.button-15:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.button-15:disabled {
+  background-image: linear-gradient(to bottom, #9f9f9f, #848484);
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* CSS */
+.button-16 {
+  touch-action: manipulation;
+  all: unset;
+  position: relative;
+  border-radius: 50px;
+  padding: 16px 24px;
+  background-color: #f0f7fa;
+  box-shadow: inset 0 -4px 8px #87bfd8, 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #0470e3;
+  transition: transform 0.4s cubic-bezier(0.55, 1, 0.15, 1);
+  will-change: transform;
+}
+
+.button-16:active {
+  transform: scale(0.92);
+}
+
+.button-16:active::after {
+  opacity: 1;
+}
+
+.button-16::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-image-source: url("https://csspro.com/css-3d-buttons/buttons-img/mario-button-borders.webp");
+  border-image-slice: 50%;
+  border-image-width: 40px;
+  border-style: solid;
+  transform: scale(1.04, 1.08);
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1);
+  will-change: transform;
+}
+
+.button-16:focus-visible::after {
+  opacity: 1;
+  animation: pulsate-16 1s infinite;
+}
+
+@keyframes pulsate-16 {
+  0% {
+    transform: scale(1.04, 1.08);
+  }
+  50% {
+    transform: scale(1.08, 1.12);
+  }
+  100% {
+    transform: scale(1.04, 1.08);
+  }
+}
+/* CSS */
+.button-17 {
+  touch-action: manipulation;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 16px;
+  background-color: #5371f4;
+  background-image: url("https://csspro.com/css-3d-buttons/buttons-img/terrazzo-blue.png");
+  background-size: 60px;
+  background-position: -2px;
+  box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.4), inset 0 -2px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  transition-property: transform;
+  transition-duration: 0.2s;
+}
+
+.button-17:active {
+  transform: scale(0.96);
+}
+
+/* CSS */
+.button-18 {
+  touch-action: manipulation;
+  display: inline-block;
+  outline: none;
+  font-family: inherit;
+  font-size: 1em;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0.3em;
+  height: 2.75em;
+  line-height: 2.5em;
+  text-transform: uppercase;
+  padding: 0 1em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4), inset 0 -2px 5px 1px rgb(139, 66, 8), inset 0 -1px 1px 3px rgb(250, 227, 133);
+  background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+  border: 1px solid #a55d07;
+  color: rgb(120, 50, 5);
+  text-shadow: 0 2px 2px rgb(250, 227, 133);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.button-18:focus,
+.button-18:hover {
+  background-size: 150% 150%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgb(250, 227, 133);
+  border: 1px solid rgba(165, 93, 7, 0.6);
+  color: rgba(120, 50, 5, 0.8);
+}
+
+.button-18:active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgb(250, 227, 133);
+}
+
+/* CSS */
+.button-19 {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.13)), radial-gradient(90% 7% at 50% 8%, rgba(255, 255, 255, 0.47) 25%, rgba(255, 255, 255, 0) 50%), #0053d0;
+  border: 0;
+  border-radius: 0.375em;
+  box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.47), 0 -0.1em 0 0.1em rgba(0, 0, 0, 0.27), 0 0.1em 0 0.1em rgba(255, 255, 255, 0.27), -0.2em 0 0.2em #003f9d inset, 0 0.2em 0.2em rgba(255, 255, 255, 0.27) inset, 0.2em 0 0.2em rgba(255, 255, 255, 0.27) inset, 0 -0.2em 0.2em #003f9d inset;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 0.75em 1em;
+  text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.47);
+  transition-property: box-shadow;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button-19,
+.button-19 span {
+  display: block;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+.button-19:focus,
+.button-19 span:focus {
+  outline: none;
+}
+
+.button-19 span {
+  transition-property: transform;
+  will-change: transform;
+}
+
+.button-19:active {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.47), 0 -0.1em 0 0.1em rgba(0, 0, 0, 0.27), 0 0.1em 0 0.1em rgba(255, 255, 255, 0.27), -0.2em 0 0.2em #002a6a inset, 0 0.2em 0.2em rgba(0, 0, 0, 0.27) inset, 0.2em 0 0.2em rgba(0, 0, 0, 0.27) inset, 0 -0.2em 0.2em #002a6a inset;
+}
+
+.button-19:active span {
+  transform: scale(0.95);
+}
+
+.button-19:focus {
+  color: #9dc4ff;
+  text-shadow: 0 0 0.2em rgba(157, 196, 255, 0.47);
+}
+
+/* CSS */
+.button-20 {
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #5f26e3;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #702cfb;
+  background-image: radial-gradient(75% 25% at 50% 95%, rgba(255, 255, 255, 0.2), transparent);
+  color: #fafafa;
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1);
+  will-change: transform;
+  cursor: pointer;
+}
+
+.button-20:focus {
+  outline-style: solid;
+  outline-color: transparent;
+}
+
+@media (hover: hover) {
+  .button-20:hover {
+    border-color: #702cfb;
+    transform: scale(1.04);
+    background-color: #7a38ff;
+  }
+}
+.button-20:focus-visible {
+  border-color: #702cfb;
+  transform: scale(1.04);
+  background-color: #7a38ff;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.0625em;
+  text-underline-offset: 0.125em;
+}
+
+.button-20:active {
+  border-color: #5329d1;
+  transform: scale(0.96);
+  background-color: #5f26e3;
+}
+
+/* CSS */
+.button-21 {
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #5f26e3;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #702cfb;
+  background-image: radial-gradient(75% 25% at 50% 5%, rgba(255, 255, 255, 0.2), transparent);
+  color: #fafafa;
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1);
+  will-change: transform;
+  cursor: pointer;
+}
+
+.button-21:focus {
+  outline-style: solid;
+  outline-color: transparent;
+}
+
+@media (hover: hover) {
+  .button-21:hover {
+    border-color: #702cfb;
+    transform: scale(1.04);
+    background-color: #7a38ff;
+  }
+}
+.button-21:focus-visible {
+  border-color: #702cfb;
+  transform: scale(1.04);
+  background-color: #7a38ff;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.0625em;
+  text-underline-offset: 0.125em;
+}
+
+.button-21:active {
+  border-color: #5329d1;
+  transform: scale(0.96);
+  background-color: #5f26e3;
+  background-image: radial-gradient(75% 25% at 50% 95%, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* CSS */
+.button-22 {
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #5f26e3;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #702cfb;
+  background-image: radial-gradient(75% 25% at 50% 95%, rgba(255, 255, 255, 0.2), transparent);
+  color: #fafafa;
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1);
+  will-change: transform;
+  cursor: pointer;
+  border-color: #b9b7dc;
+  background-color: #e8e8f2;
+  background-image: radial-gradient(75% 25% at 50% 95%, #fff, transparent);
+  box-shadow: inset 0 0 2px 1px #fff, 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #45456c;
+}
+
+.button-22:focus {
+  outline-style: solid;
+  outline-color: transparent;
+}
+
+@media (hover: hover) {
+  .button-22:hover {
+    transform: scale(1.04);
+  }
+}
+.button-22:focus-visible {
+  transform: scale(1.04);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.0625em;
+  text-underline-offset: 0.125em;
+}
+
+.button-22:active {
+  transform: scale(0.96);
+}
+
+/* CSS */
+.button-23 {
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #5f26e3;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #702cfb;
+  background-image: radial-gradient(75% 25% at 50% 95%, rgba(255, 255, 255, 0.2), transparent);
+  color: #fafafa;
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  transition-property: border-color, transform, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1);
+  will-change: transform;
+  cursor: pointer;
+  border-color: #b9b7dc;
+  background-color: #e8e8f2;
+  background-image: radial-gradient(75% 25% at 50% 5%, #fff, transparent);
+  box-shadow: inset 0 0 2px 1px #fff, 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+  color: #45456c;
+}
+
+.button-23:focus {
+  outline-style: solid;
+  outline-color: transparent;
+}
+
+@media (hover: hover) {
+  .button-23:hover {
+    transform: scale(1.04);
+  }
+}
+.button-23:focus-visible {
+  transform: scale(1.04);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.0625em;
+  text-underline-offset: 0.125em;
+}
+
+.button-23:active {
+  transform: scale(0.96);
+}
+
+/* CSS */
+.button-24 {
+  background-color: transparent;
+  background-image: linear-gradient(#fff, #f5f5fa);
+  border: 0 solid #003dff;
+  border-radius: 9999px;
+  box-shadow: rgba(37, 44, 97, 0.15) 0 4px 11px 0, rgba(93, 100, 148, 0.2) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #484c7a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Hind, system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  margin: 4px;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: inherit;
+  text-wrap: nowrap;
+  transition: all 0.2s ease-out;
+  transition-behavior: normal;
+  white-space-collapse: collapse;
+  line-height: 1.15;
+}
+
+@media (min-width: 576px) {
+  .button-24 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+.button-24:after,
+.button-24:before,
+.div-flex-items-center-justify-center:after,
+.div-flex-items-center-justify-center:before,
+.span-flex-items-center-h-16-w-auto-mr-8-py-2-flex-grow-0-flex-shrink-0-fill-current:after,
+.span-flex-items-center-h-16-w-auto-mr-8-py-2-flex-grow-0-flex-shrink-0-fill-current:before,
+.svg-block-h-full:after,
+.svg-block-h-full:before {
+  border: 0 solid #003dff;
+  box-sizing: border-box;
+}
+
+.button-24:hover {
+  box-shadow: rgba(37, 44, 97, 0.15) 0 8px 22px 0, rgba(93, 100, 148, 0.2) 0 4px 6px 0;
+}
+
+.button-24:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* CSS */
+.button-25 {
+  background-color: transparent;
+  background-image: linear-gradient(#5172ff, #003dff);
+  border: 0 solid #003dff;
+  border-radius: 9999px;
+  box-shadow: rgba(37, 44, 97, 0.15) 0 4px 11px 0, rgba(93, 100, 148, 0.2) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Hind, system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  margin: 4px;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: inherit;
+  text-wrap: nowrap;
+  transition: all 0.2s ease-out;
+  transition-behavior: normal;
+  white-space-collapse: collapse;
+  line-height: 1.15;
+}
+
+@media (min-width: 576px) {
+  .button-25 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}
+.button-25:after,
+.button-25:before,
+.div-flex-items-center-justify-center:after,
+.div-flex-items-center-justify-center:before,
+.span-flex-items-center-h-16-w-auto-mr-8-py-2-flex-grow-0-flex-shrink-0-fill-current:after,
+.span-flex-items-center-h-16-w-auto-mr-8-py-2-flex-grow-0-flex-shrink-0-fill-current:before,
+.svg-block-h-full:after,
+.svg-block-h-full:before {
+  border: 0 solid #003dff;
+  box-sizing: border-box;
+}
+
+.button-25:hover {
+  box-shadow: rgba(37, 44, 97, 0.15) 0 8px 22px 0, rgba(93, 100, 148, 0.2) 0 4px 6px 0;
+}
+
+.button-25:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* CSS */
+.button-26 {
+  background: #fff;
+  border: 2px solid #888;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+  padding: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), 5px 14px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.1s ease-in-out;
+}
+
+.button-26__content {
+  padding: 24px 40px;
+  border-radius: 8px;
+  box-shadow: inset 0 -6px #d5d7de, 0 -2px #ffffff;
+  transition: all 0.1s ease-in-out;
+}
+
+.button-26__text {
+  color: #888;
+  display: block;
+  transform: translate3d(0, -4px, 0);
+  transition: all 0.1s ease-in-out;
+}
+
+.button-26:active {
+  box-shadow: none;
+}
+
+.button-26:active .button-26__content {
+  box-shadow: none;
+}
+
+.button-26:active .button-26__text {
+  transform: translate3d(0, 0, 0);
+}
+
+/* CSS */
+.button-27 {
+  position: relative;
+  padding: 16px;
+  background: linear-gradient(0deg, #fcfcfc 0%, #f5f5f5 100%);
+  border: 6px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.5), 1px 3px 3px 2px #fff, 0 0 0 6px #ECECEC;
+  border-radius: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  transition: border 0.1s ease-in-out, padding 0.1s ease-in-out, margin 0.1s ease-in-out;
+}
+
+.button-27:after {
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: -6px;
+  right: -6px;
+  background: linear-gradient(#fff, #ededed);
+  content: "";
+  z-index: -1;
+  border-radius: 16px;
+}
+
+.button-27:hover {
+  border: 2px solid transparent;
+  background-image: linear-gradient(180deg, #E6E6E6 0%, #F7F7F7 100%);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.35), 0 0 0 6px #ECECEC;
+  padding: 20px;
+}
+
+.button-27:active {
+  border-top: 1px solid transparent;
+}
+
+/* CSS */
+.button-28 {
+  background: #7fd12f;
+  border: 1px solid #629921;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 #8ff339;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  outline: 0;
+  padding: 10px 35px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 #629921;
+  background: linear-gradient(to bottom, #7fd12f 0%, #629921 100%);
+  transition: padding 50ms ease-in-out, border-top-width 50ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.button-28:hover {
+  background: #88d602;
+  background: linear-gradient(to bottom, #88d602 0%, #66a023 100%);
+  box-shadow: inset 0 1px 0 #8ff339, 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.button-28:active {
+  border-top-width: 2px;
+  box-shadow: none;
+  padding-bottom: 8px;
+}
+
+/* CSS */
+.button-29 {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #4D4AE8;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  border: 1px solid #4D4AE8;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-transform: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-29:focus:not(:focus-visible),
+.button-29:focus {
+  outline: 0;
+}
+
+.button-29:hover {
+  background-color: #3733E5;
+  border-color: #3733E5;
+}
+
+.button-29:focus {
+  background-color: #413FC5;
+  border-color: #3E3BBA;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(46, 54, 80, 0.075) 0 1px 1px, rgba(104, 101, 235, 0.5) 0 0 0 0.2rem;
+}
+
+.button-29:active {
+  background-color: #3E3BBA;
+  background-image: none;
+  border-color: #3A38AE;
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+}
+
+.button-29:active:focus {
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset, rgba(104, 101, 235, 0.5) 0 0 0 0.2rem;
+}
+
+.button-29:disabled {
+  background-image: none;
+  box-shadow: none;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* CSS */
+.button-30 {
+  padding: 12px 26px;
+  color: #fff;
+  background-image: linear-gradient(180deg, #0781FD 0%, #0346ED 100%);
+  border-radius: 8px;
+  border: 0;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07), inset 0 1px 0 0px rgba(255, 255, 255, 0.15);
+  transition: all 150ms ease-in-out;
+}
+
+.button-30:hover {
+  filter: brightness(1.1);
+}
+
+.button-30:active {
+  transform: scale(0.95);
+}
+
+/* CSS */
+.button-31 {
+  padding: 12px 26px;
+  color: #fff;
+  background-image: linear-gradient(0deg, #0781FD 0%, #0346ED 100%);
+  border-radius: 8px;
+  border: 0;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07), inset 0 1px 0 0px rgba(255, 255, 255, 0.15);
+  transition: all 150ms ease-in-out;
+}
+
+.button-31:hover {
+  filter: brightness(1.1);
+}
+
+.button-31:active {
+  transform: scale(0.95);
+}
+
+/* CSS */
+.button-32 {
+  padding: 12px 26px;
+  color: #fff;
+  border: 0;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  border-radius: 10px;
+  background-color: #111111;
+  background-image: radial-gradient(76% 151% at 52% -52%, rgba(255, 255, 255, 0.23) 0%, transparent 100%);
+}
+
+.button-32:hover {
+  filter: brightness(1.1);
+}
+
+.button-32:active {
+  transform: scale(0.95);
+}
+
+/* CSS */
+.button-33 {
+  padding: 12px 26px;
+  color: #fff;
+  border: 0;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+  border-radius: 12px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0 1px 1px 0 inset, 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  background: linear-gradient(180deg, #404146 0%, #272729 100%);
+}
+
+.button-33:hover {
+  filter: brightness(1.1);
+}
+
+.button-33:active {
+  transform: scale(0.95);
+}
+
+/* CSS */
+.button-34 {
+  padding: 12px 26px;
+  color: #fff;
+  border: 0;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+  border-radius: 12px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0 0 inset;
+  background-color: #1A1B1D;
+  background-image: linear-gradient(180deg, rgba(206, 211, 234, 0.07) 0%, transparent 100%);
+}
+
+.button-34:hover {
+  filter: brightness(1.1);
+}
+
+.button-34:active {
+  transform: scale(0.95);
+}
+
+/* CSS */
+.button-35 {
+  padding: 12px 26px;
+  border: 0;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+  border-radius: 14px;
+  border: 1px solid #8BB33D;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.07) 0 1px 1px, rgba(0, 0, 0, 0.07) 0 2px 2px, rgba(0, 0, 0, 0.07) 0 4px 4px;
+  color: #000000;
+  font-weight: 600;
+  background-image: linear-gradient(180deg, #B4E84E 0%, #8BB33D 100%);
+  text-shadow: -1px 0 1px #B4E84E, 0 1px 1px #B4E84E, 1px 0 1px #B4E84E, 0 -1px 1px #B4E84E;
+}
+
+.button-35:hover {
+  filter: brightness(1.1);
+}
+
+.button-35:active {
+  transform: scale(0.95);
+}
+
+/* CSS */
+.button-36 {
+  padding: 12px 26px;
+  padding-bottom: 18px;
+  border: 0;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+  border-radius: 20px;
+  color: #071432;
+  font-weight: bold;
+  background: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0, inset 0px -6px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.button-36:hover {
+  filter: brightness(0.98);
+}
+
+.button-36:active {
+  filter: brightness(0.97);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 6px 0, inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* CSS */
+.button-37 {
+  color: #fff;
+  padding: 15px 25px;
+  background-color: #38D2D2;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.button-37:hover {
+  filter: brightness(1.05);
+}
+
+.button-37:active {
+  transform: scale(0.95);
+}
+
+/* CSS */
+.button-38 {
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  box-shadow: rgba(255, 255, 255, 0.1) -3px -3px 9px inset, rgba(255, 255, 255, 0.15) 0 3px 9px inset, rgba(255, 255, 255, 0.6) 0 1px 1px inset, rgba(0, 0, 0, 0.3) 0 -8px 36px inset, rgba(255, 255, 255, 0.6) 0 1px 5px inset, rgba(0, 0, 0, 0.2) 2px 19px 31px;
+  background-color: #7F00FF;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  transition: all 150ms ease-in-out;
+}
+
+.button-38:hover {
+  filter: brightness(1.05);
+}
+
+.button-38:active {
+  transform: scale(0.95);
+}
+
+/* CSS */
+.button-39 {
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: #fff;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: linear-gradient(180deg, #C387F2 0%, #6E31A1 100%);
+  box-shadow: rgba(110, 49, 161, 0.7294117647) 0 0 0 1px, rgba(255, 255, 255, 0.2784313725) 0 1px 0px 0 inset, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.button-39:hover {
+  filter: brightness(1.08);
+}
+
+.button-39:active {
+  transform: scale(0.95);
+  filter: none;
+}
+
+/* CSS */
+.button-40 {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.button-40::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+.button-40:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 2em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.button-40:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color), inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+.hover\:bg-gray-300:hover{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity)) !important;
+}
+
+.hover\:text-black:hover{
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
+}
+
+.focus\:border-blue-500:focus{
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity)) !important;
+}
+
+.focus\:ring-blue-500:focus{
+  --tw-ring-opacity: 1 !important;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity)) !important;
+}
+
+@media (min-width: 768px){
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:flex{
+    display: flex !important;
+  }
+  .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+:is(:where(.dark) .dark\:border-gray-700){
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity)) !important;
+}
+
+:is(:where(.dark) .dark\:bg-slate-900){
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity)) !important;
+}
+
+:is(:where(.dark) .dark\:bg-opacity-80){
+  --tw-bg-opacity: 0.8 !important;
+}
+
+:is(:where(.dark) .dark\:text-gray-400){
+  --tw-text-opacity: 1 !important;
+  color: rgb(156 163 175 / var(--tw-text-opacity)) !important;
+}
